@@ -33,7 +33,7 @@ This script will:
 4. Plot the results in `performance_comparison.png`.
 
 ### Results
-![Performance Comparison](performance_comparison.png)
+![Performance Comparison](img/performance_comparison.png)
 
 ## 📝 Usage
 Please refer to the `README.md` in each subdirectory for specific build and run instructions.
