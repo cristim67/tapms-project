@@ -48,4 +48,4 @@ Please refer to the `README.md` in each subdirectory for specific build and run 
 
 ---
 **Author**: Cristi Miloiu
-**Course**: TAPSM
+**Course**: TAPMS
