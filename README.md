@@ -3,18 +3,26 @@
 
 This project implements a simulation of fire propagation in a forest using Cellular Automata rules. The primary objective is to compare the performance, scalability, and development experience across three different programming languages and environments:
 
-- **Rust**: High performance with safety and easy parallelism (`rayon`).
-- **Go**: Concurrent modeling using Goroutines and Channels (`sync`).
-- **Python**: Rapid prototyping with vectorized operations (`numpy`).
+- **Rust**: Using `rayon` for data parallelism.
+- **Go**: Using goroutines for concurrent execution.
+- **C++**: Using `std::thread` for manual parallelization (The "Gold Standard").
+- **Python**: Using `numpy` for vectorization (Baseline for Productivity).
 
 This work serves as a case study for analyzing **High Performance**, **High Portability**, and **High Productivity** (HP3) in simulation software.
 
 ## 📂 Project Structure
 
+- `rust_impl/`: Rust source code and Cargo definition.
+- `go_impl/`: Go source code and module definition.
+- `cpp_impl/`: C++ source code and build instructions.
+- `python_impl/`: Python source code and requirements.
+- `report/`: The LaTeX source and PDF for the scientific report.
+- `run_benchmark.py`: Python script to orchestrate benchmarks.
 | Implementation | Description | Path |
 | :--- | :--- | :--- |
 | **Rust** | Parallel execution using `rayon` library. | [`rust_impl/`](./rust_impl/) |
 | **Go** | Concurrent execution using Goroutines. | [`go_impl/`](./go_impl/) |
+| **C++** | Manual parallelization using `std::thread`. | [`cpp_impl/`](./cpp_impl/) |
 | **Python** | Vectorized implementation using `numpy`. | [`python_impl/`](./python_impl/) |
 
 ## 📊 Benchmarks
@@ -27,7 +35,7 @@ To reproduce the results, run the Python orchestration script:
 python3 run_benchmark.py
 ```
 This script will:
-1. Build the Rust and Go binaries.
+1. Build the Rust, Go, and C++ binaries.
 2. Run simulations for all languages across defined grid sizes.
 3. Generate a log file `benchmark_results.csv`.
 4. Plot the results in `performance_comparison.png`.
